@@ -22,3 +22,7 @@ The deletion form uses Bridge's public Supabase URL and publishable/anon key, wh
 - `delete-account/index.html` — ownership-verified deletion request form.
 
 Use the in-app pages as the source of truth when updating legal text. Update the date on a page whenever its text changes materially. Play Console also requires a monitored child-safety contact email; use the developer account email if it is actively monitored for these reports, or provide a dedicated safety address.
+
+## Admin console
+
+- `/admin/` — Google sign-in protected moderation and community admin dashboard. Access is enforced by the existing Supabase admin role and database policies. See [admin/README.md](admin/README.md) for the required redirect URL configuration.
