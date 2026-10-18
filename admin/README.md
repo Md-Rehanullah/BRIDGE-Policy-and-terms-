@@ -6,8 +6,8 @@ No Supabase service-role key or moderation-provider secret is included in this s
 
 ## Required Supabase redirect URL
 
-In Supabase Dashboard, open **Authentication → URL Configuration → Redirect URLs** and allow:
+In Supabase Dashboard, open **Authentication → URL Configuration → Redirect URLs** and allow this exact URL:
 
 `https://md-rehanullah.github.io/BRIDGE-Policy-and-terms-/admin/`
 
-Keep the existing app and account-deletion redirect URLs. The Google provider's authorized redirect URI remains the Supabase Auth callback shown in the Supabase provider settings.
+Keep the existing app and account-deletion redirect URLs. The Google provider's authorized redirect URI remains the Supabase Auth callback shown in the Supabase provider settings. The admin portal uses PKCE and returns to this fixed GitHub Pages URL. If this URL is missing or mismatched in the allow-list, Supabase can fall back to the project's Site URL (which may still be `localhost`), so add it exactly as shown above.
